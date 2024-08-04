@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="MathOperators_8cuh" kind="file" language="C++">
     <compoundname>MathOperators.cuh</compoundname>
     <briefdescription>
@@ -291,7 +291,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>inline<sp/>__device__<sp/>half<sp/>zero()<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">#if<sp/>CUDA_VERSION<sp/>&gt;=<sp/>9000</highlight></codeline>
+<codeline><highlight class="normal">#if<sp/>CUDA_VERSION<sp/>&gt;=<sp/>9000<sp/>||<sp/>defined(USE_AMD_ROCM)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
 <codeline><highlight class="normal">#else</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>half<sp/>h;</highlight></codeline>
