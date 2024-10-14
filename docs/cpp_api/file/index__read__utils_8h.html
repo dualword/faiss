@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File index_read_utils.h &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/file/index__read__utils_8h.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -242,14 +239,15 @@
 <li class="toctree-l2"><a class="reference internal" href="bf16_8h.html">File bf16.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone__index_8h.html">File clone_index.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-avx2_8h.html">File code_distance-avx2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code__distance-avx512_8h.html">File code_distance-avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-generic_8h.html">File code_distance-generic.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance_8h.html">File code_distance.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code__distance__avx512_8h.html">File code_distance_avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_8h.html">File common.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances_8h.html">File distances.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances__fused_8h.html">File distances_fused.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances-inl_8h.html">File extra_distances-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances_8h.html">File extra_distances.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="factory__tools_8h.html">File factory_tools.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-arm_8h.html">File fp16-arm.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-fp16c_8h.html">File fp16-fp16c.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-inl_8h.html">File fp16-inl.h</a></li>
@@ -288,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="simdlib__ppc64_8h.html">File simdlib_ppc64.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting_8h.html">File sorting.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transpose-avx2-inl_8h.html">File transpose-avx2-inl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transpose-avx512-inl_8h.html">File transpose-avx512-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils_8h.html">File utils.h</a></li>
 </ul>
 </li>
@@ -373,6 +372,21 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss18read_InvertedListsEP8IndexIVFP8IOReaderi">
 <span id="_CPPv3N5faiss18read_InvertedListsEP8IndexIVFP8IOReaderi"></span><span id="_CPPv2N5faiss18read_InvertedListsEP8IndexIVFP8IOReaderi"></span><span id="faiss::read_InvertedLists__IndexIVFP.IOReaderP.i"></span><span class="target" id="namespacefaiss_1acf993db387d508bb9e1d517d612138d0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_InvertedLists</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ivf</span></span>, <a class="reference internal" href="io_8h.html#_CPPv4N5faiss8IOReaderE" title="faiss::IOReader"><span class="n"><span class="pre">IOReader</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">f</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">io_flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss18read_InvertedListsEP8IndexIVFP8IOReaderi" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss17set_array_invlistEP8IndexIVFRNSt6vectorINSt6vectorI5idx_tEEEE">
+<span id="_CPPv3N5faiss17set_array_invlistEP8IndexIVFRNSt6vectorINSt6vectorI5idx_tEEEE"></span><span id="_CPPv2N5faiss17set_array_invlistEP8IndexIVFRNSt6vectorINSt6vectorI5idx_tEEEE"></span><span id="faiss::set_array_invlist__IndexIVFP.std::vector:std::vector:idx_t::R"></span><span class="target" id="namespacefaiss_1aa12092ef91253e1539c474b4697f287f"></span><a class="reference internal" href="InvertedLists_8h.html#_CPPv4N5faiss18ArrayInvertedListsE" title="faiss::ArrayInvertedLists"><span class="n"><span class="pre">ArrayInvertedLists</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">set_array_invlist</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ivf</span></span>, <a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="MetricType_8h.html#_CPPv4N5faiss5idx_tE" title="faiss::idx_t"><span class="n"><span class="pre">idx_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ids</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss17set_array_invlistEP8IndexIVFRNSt6vectorINSt6vectorI5idx_tEEEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss21read_ProductQuantizerEP16ProductQuantizerP8IOReader">
+<span id="_CPPv3N5faiss21read_ProductQuantizerEP16ProductQuantizerP8IOReader"></span><span id="_CPPv2N5faiss21read_ProductQuantizerEP16ProductQuantizerP8IOReader"></span><span id="faiss::read_ProductQuantizer__ProductQuantizerP.IOReaderP"></span><span class="target" id="namespacefaiss_1a4eae12c70887bff34241a726efb9ff02"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_ProductQuantizer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="ProductQuantizer_8h.html#_CPPv4N5faiss16ProductQuantizerE" title="faiss::ProductQuantizer"><span class="n"><span class="pre">ProductQuantizer</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pq</span></span>, <a class="reference internal" href="io_8h.html#_CPPv4N5faiss8IOReaderE" title="faiss::IOReader"><span class="n"><span class="pre">IOReader</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss21read_ProductQuantizerEP16ProductQuantizerP8IOReader" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss20read_ScalarQuantizerEP15ScalarQuantizerP8IOReader">
+<span id="_CPPv3N5faiss20read_ScalarQuantizerEP15ScalarQuantizerP8IOReader"></span><span id="_CPPv2N5faiss20read_ScalarQuantizerEP15ScalarQuantizerP8IOReader"></span><span id="faiss::read_ScalarQuantizer__ScalarQuantizerP.IOReaderP"></span><span class="target" id="namespacefaiss_1a39ebc7cee79b9534f7a5d6d622ed0250"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_ScalarQuantizer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="ScalarQuantizer_8h.html#_CPPv4N5faiss15ScalarQuantizerE" title="faiss::ScalarQuantizer"><span class="n"><span class="pre">ScalarQuantizer</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ivsc</span></span>, <a class="reference internal" href="io_8h.html#_CPPv4N5faiss8IOReaderE" title="faiss::IOReader"><span class="n"><span class="pre">IOReader</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss20read_ScalarQuantizerEP15ScalarQuantizerP8IOReader" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
