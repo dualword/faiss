@@ -19,6 +19,7 @@
     <derivedcompoundref refid="structfaiss_1_1IndexSplitVectors" prot="public" virt="non-virtual">faiss::IndexSplitVectors</derivedcompoundref>
     <derivedcompoundref refid="structfaiss_1_1MultiIndexQuantizer" prot="public" virt="non-virtual">faiss::MultiIndexQuantizer</derivedcompoundref>
     <derivedcompoundref refid="classfaiss_1_1gpu_1_1GpuIndex" prot="public" virt="non-virtual">faiss::gpu::GpuIndex</derivedcompoundref>
+    <derivedcompoundref refid="classfaiss_1_1gpu__metal_1_1MetalIndex" prot="public" virt="non-virtual">faiss::gpu_metal::MetalIndex</derivedcompoundref>
     <includes refid="Index_8h" local="no">Index.h</includes>
     <sectiondef kind="public-type">
       <memberdef kind="typedef" id="structfaiss_1_1Index_1af317cb1e2ad0bd145f716f2243b693eb" prot="public" static="no">
@@ -67,7 +68,7 @@
         <location file="faiss/Index.h" line="105" column="9" bodyfile="faiss/Index.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfaiss_1_1Index_1a6970683faa021b7a6f1a0865c0d4eccd" prot="public" static="no" mutable="no">
-        <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+        <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
         <definition>idx_t faiss::Index::ntotal</definition>
         <argsstring></argsstring>
         <name>ntotal</name>
@@ -150,7 +151,7 @@
         <name>Index</name>
         <qualifiedname>faiss::Index::Index</qualifiedname>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>d_in</declname>
           <defval>0</defval>
         </param>
@@ -224,7 +225,7 @@
         <reimplementedby refid="structfaiss_1_1IndexSplitVectors_1aafa4c780e325855fe247052453967845">train</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexSVSVamanaLeanVec_1ae70030c46fe5bae48b84596069e670b0">train</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -266,7 +267,7 @@
         <qualifiedname>faiss::Index::train_with_queries</qualifiedname>
         <reimplementedby refid="structfaiss_1_1IndexSVSVamanaLeanVec_1ae83c352204cc61df4adf2424e5bfe737">train_with_queries</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -274,7 +275,7 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n_train_q</declname>
         </param>
         <param>
@@ -332,7 +333,7 @@
         <qualifiedname>faiss::Index::train_ex</qualifiedname>
         <reimplementedby refid="structfaiss_1_1gpu_1_1GpuIndexCagra_1a8a472fd13dca61dd0da11b0db3486d29">train_ex</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -358,6 +359,7 @@
         <name>add</name>
         <qualifiedname>faiss::Index::add</qualifiedname>
         <reimplementedby refid="structfaiss_1_1gpu_1_1GpuIndexCagra_1ad8ef055ad09f4bce9ce52f396540e6fb">add</reimplementedby>
+        <reimplementedby refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat_1a1e68edeb43bed28a6403b4cad7c3912d">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1AdditiveCoarseQuantizer_1ab89eda0c3fedb121517337cef79c01a6">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFastScan_1aaa9e2214ac167eb6136d37b51a3c1e2c">add</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlatPanorama_1a178f7ed70fb50dff8e98f0a5bde5df03">add</reimplementedby>
@@ -383,7 +385,7 @@
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1a5fcf3e9af349e17c27ce82fc0ed94966">add</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexFlat_1a831c5725967f64e06a9a64c4b71f5f64">add</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -426,7 +428,7 @@
         <reimplementedby refid="structfaiss_1_1gpu_1_1GpuIndexCagra_1ae6308a059e81139f55e67dfc709e6a6e">add_ex</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1afab6f6c4b430e672bad9bee8264cc6f4">add_ex</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -452,13 +454,14 @@
         <name>add_with_ids</name>
         <qualifiedname>faiss::Index::add_with_ids</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1a0e7fa779ba9d47b0af36161de2a3b191">add_with_ids</reimplementedby>
+        <reimplementedby refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat_1a7685d5790aaf5c4468fa9aabcde200f3">add_with_ids</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVF_1a14e75169bddcd0251134821416b060a1">add_with_ids</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFFastScan_1a8699e7d828750f02bfc86014269e4a6c">add_with_ids</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFFlatDedup_1a4e27cfca56590371e0984d8f16b2b68d">add_with_ids</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFPQR_1ae526b4722b470a33643d40ef30cf27f7">add_with_ids</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1aa37b7428e0ac315db5e52b1cb1e42605">add_with_ids</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -466,7 +469,7 @@
           <declname>x</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>xids</declname>
         </param>
         <briefdescription>
@@ -513,7 +516,7 @@
         <qualifiedname>faiss::Index::add_with_ids_ex</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1aa4ee320c856211e4e6238b95eb338996">add_with_ids_ex</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -525,7 +528,7 @@
           <declname>numeric_type</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>xids</declname>
         </param>
         <briefdescription>
@@ -543,6 +546,7 @@
         <name>search</name>
         <qualifiedname>faiss::Index::search</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1a7d7d3746b5f02be8317e142d966c7d4f">search</reimplementedby>
+        <reimplementedby refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat_1aa0cc45b873cbad5fc4e79acafb98f8f2">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1Index2Layer_1ac1d721d2bc0ec334b731ddab9e0f1160">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexAdditiveQuantizer_1a67f0c721609606b5addccdf51c4232ad">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1AdditiveCoarseQuantizer_1a1b86a90e7516af393d14255c71c8d804">search</reimplementedby>
@@ -579,7 +583,7 @@
         <reimplementedby refid="structfaiss_1_1IndexSVSFlat_1a126d2241af23193d60badc4956d5b219">search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexSVSVamana_1a019544f0725293e7cfe4d675d53eeaa0">search</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -587,7 +591,7 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k</declname>
         </param>
         <param>
@@ -595,7 +599,7 @@
           <declname>distances</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <param>
@@ -663,7 +667,7 @@
         <qualifiedname>faiss::Index::search_ex</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1a5dbd8404a4bf32a43dbf9a349a680b9d">search_ex</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -675,7 +679,7 @@
           <declname>numeric_type</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k</declname>
         </param>
         <param>
@@ -683,7 +687,7 @@
           <declname>distances</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <param>
@@ -749,7 +753,7 @@
         <reimplementedby refid="structfaiss_1_1IndexRefine_1a0b8e378d2a5f040f7c82e2ddcc1f27c0">range_search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexSVSVamana_1a9d9b2ff0114ac59965bcf990b09b844c">range_search</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -821,7 +825,7 @@
         <qualifiedname>faiss::Index::assign</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1ab6382636bc3f651645ee66d8744f7c0f">assign</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -829,11 +833,11 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k</declname>
           <defval>1</defval>
         </param>
@@ -891,6 +895,7 @@
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexIVFFlat_1a88676a893e9b44041e7a52327d960b54">reset</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexIVFPQ_1a3a43a70461e09ef87bdb7b48ec420dd2">reset</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexIVFScalarQuantizer_1a6e25bd642bf3ae6fe84c9c315e0edf25">reset</reimplementedby>
+        <reimplementedby refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat_1a603f97a00cc2770dc2f6c2609dca0508">reset</reimplementedby>
         <reimplementedby refid="structfaiss_1_1AdditiveCoarseQuantizer_1a2ec358ccc474cc183f861f350ebbcb8f">reset</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFastScan_1a6f2ae4a0a5dd9d1c2afca4bc7f9c038a">reset</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlatPanorama_1a35fdf82abfe078969b9a7a17fbaa6516">reset</reimplementedby>
@@ -969,7 +974,7 @@
         <reimplementedby refid="structfaiss_1_1IndexRefine_1a01356d39a4eda730517a295c2c7bb869">reconstruct</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRandom_1aeb61a0418e111af3a3409905cd6b6483">reconstruct</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>key</declname>
         </param>
         <param>
@@ -1011,11 +1016,11 @@
         <qualifiedname>faiss::Index::reconstruct_batch</qualifiedname>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexFlat_1a66814ad5f94a9e7534d4fdf4951d9bee">reconstruct_batch</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>keys</declname>
         </param>
         <param>
@@ -1070,11 +1075,11 @@
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a02ebb27dd56aec9a93c50bd6b96184e7">reconstruct_n</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexFlat_1a877b903b95d7b0d2bc48717a1690b6da">reconstruct_n</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>i0</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>ni</declname>
         </param>
         <param>
@@ -1126,7 +1131,7 @@
         <reimplementedby refid="structfaiss_1_1IndexIVF_1ae370aa40139ca15359b1cbdf88c9b3d8">search_and_reconstruct</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a6082f6ca04afc943d5e1c729f24de283">search_and_reconstruct</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1134,7 +1139,7 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k</declname>
         </param>
         <param>
@@ -1142,7 +1147,7 @@
           <declname>distances</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <param>
@@ -1223,7 +1228,7 @@
         <reimplementedby refid="structfaiss_1_1IndexFlatPanorama_1a87c06a8ca57d0b84f6fcf94fbfd1cfda">search_subset</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a7a6a1dafa7e0ffacc9db2c18a669d35b">search_subset</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1231,15 +1236,15 @@
           <declname>x</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k_base</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>base_labels</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>k</declname>
         </param>
         <param>
@@ -1247,7 +1252,7 @@
           <declname>distances</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>labels</declname>
         </param>
         <briefdescription>
@@ -1335,7 +1340,7 @@
           <declname>residual</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>key</declname>
         </param>
         <briefdescription>
@@ -1383,7 +1388,7 @@
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndex_1a1a1ccf88e127b613c5ef65e52d7a6428">compute_residual_n</reimplementedby>
         <reimplementedby refid="classfaiss_1_1gpu_1_1GpuIndexFlat_1a8dddfaa491c1c2cfe2e03fa06e9676b4">compute_residual_n</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1395,7 +1400,7 @@
           <declname>residuals</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>keys</declname>
         </param>
         <briefdescription>
@@ -1508,7 +1513,7 @@
         <reimplementedby refid="structfaiss_1_1IndexScalarQuantizer_1ae8c5ed4f9c2145aa074986bf1be3af46">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexNeuralNetCodec_1a90a9e0e680a9734bf24b029e4218a43c">sa_encode</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1584,7 +1589,7 @@
         <reimplementedby refid="structfaiss_1_1IndexIVFAdditiveQuantizer_1a0ce87a96183a3bbd1b3d70b6fe7e30ce">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexNeuralNetCodec_1a959a2734dcc70267ac5b900fbe0d7825">sa_decode</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1647,7 +1652,7 @@
           <declname>otherIndex</declname>
         </param>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>add_id</declname>
           <defval>0</defval>
         </param>
@@ -1693,7 +1698,7 @@
         <reimplementedby refid="structfaiss_1_1IndexFlatPanorama_1a48d3d2d28ebfe217bc5b52ed40cab40d">add_sa_codes</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlatCodes_1ad30841b719b3c4949f0ac5f656e28ee2">add_sa_codes</reimplementedby>
         <param>
-          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <type><ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref></type>
           <declname>n</declname>
         </param>
         <param>
@@ -1701,7 +1706,7 @@
           <declname>codes</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <type>const <ref refid="namespacefaiss_1ad95f6ecce1dcddede15df19a5b17adf6" kindref="member">idx_t</ref> *</type>
           <declname>xids</declname>
         </param>
         <briefdescription>
@@ -2293,6 +2298,18 @@
         <label>faiss::gpu::GpuIndexIVFScalarQuantizer</label>
         <link refid="classfaiss_1_1gpu_1_1GpuIndexIVFScalarQuantizer"/>
         <childnode refid="90" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>faiss::gpu_metal::MetalIndex</label>
+        <link refid="classfaiss_1_1gpu__metal_1_1MetalIndex"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>faiss::gpu_metal::MetalIndexFlat</label>
+        <link refid="classfaiss_1_1gpu__metal_1_1MetalIndexFlat"/>
+        <childnode refid="94" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
